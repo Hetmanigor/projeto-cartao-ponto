@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+
+  postgres_local:
+    image: postgres:15-alpine
+    container_name: postgres_local
+    environment:
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD:
+      POSTGRES_DB: 
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER -d $POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5 
+    networks:
+      - rede-cartao-ponto
+    
+  # Container do Front-end (Nginx + HTML/JS)
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    networks:
+      - rede-cartao-ponto
+    depends_on:
+      - backend
+
+  # Container do Back-end (API Python)
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_HOST=db
+      - POSTGRES_DB=meudb
+      - POSTGRES_USER=usuario
+      - POSTGRES_PASSWORD=senha
+    networks:
+      - rede-cartao-ponto
+    depends_on:
+      - db
+
+  # Container do Banco de Dados (PostgreSQL)
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=meudb
+      - POSTGRES_USER=usuario
+      - POSTGRES_PASSWORD=senha
+    volumes:
+      - pg_dados_ponto:/var/lib/postgresql/data
+    networks:
+      - rede-cartao-ponto
+
+networks:
+  rede-cartao-ponto:
+    driver: bridge
+
+volumes:
+  pg_dados_ponto:
