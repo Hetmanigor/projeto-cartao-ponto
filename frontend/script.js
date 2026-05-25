@@ -1,4 +1,4 @@
-const API_URL = 'http://18.231.124.171:5000/';
+const API_URL = 'http://18.231.124.171:5000/pontos';
 
 // Atualiza o relógio na tela
 function atualizarRelogio() {
