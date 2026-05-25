@@ -1,0 +1,31 @@
+2026-05-25 18:57:46.992 | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+2026-05-25 18:57:46.992 | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+2026-05-25 18:57:46.997 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+2026-05-25 18:57:47.033 | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+2026-05-25 18:57:47.074 | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+2026-05-25 18:57:47.075 | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+2026-05-25 18:57:47.075 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+2026-05-25 18:57:47.089 | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+2026-05-25 18:57:47.094 | /docker-entrypoint.sh: Configuration complete; ready for start up
+2026-05-25 18:57:47.121 | 2026/05/25 21:57:47 [notice] 1#1: using the "epoll" event method
+2026-05-25 18:57:47.121 | 2026/05/25 21:57:47 [notice] 1#1: nginx/1.31.1
+2026-05-25 18:57:47.121 | 2026/05/25 21:57:47 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026-05-25 18:57:47.121 | 2026/05/25 21:57:47 [notice] 1#1: OS: Linux 6.6.87.2-microsoft-standard-WSL2
+2026-05-25 18:57:47.121 | 2026/05/25 21:57:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2026-05-25 18:57:47.123 | 2026/05/25 21:57:47 [notice] 1#1: start worker processes
+2026-05-25 18:57:47.125 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 30
+2026-05-25 18:57:47.125 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 31
+2026-05-25 18:57:47.126 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 32
+2026-05-25 18:57:47.128 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 33
+2026-05-25 18:57:47.130 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 34
+2026-05-25 18:57:47.132 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 35
+2026-05-25 18:57:47.134 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 36
+2026-05-25 18:57:47.135 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 37
+2026-05-25 18:57:47.137 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 38
+2026-05-25 18:57:47.139 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 39
+2026-05-25 18:57:47.140 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 40
+2026-05-25 18:57:47.141 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 41
+2026-05-25 18:57:47.143 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 42
+2026-05-25 18:57:47.144 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 43
+2026-05-25 18:57:47.146 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 44
+2026-05-25 18:57:47.147 | 2026/05/25 21:57:47 [notice] 1#1: start worker process 45
