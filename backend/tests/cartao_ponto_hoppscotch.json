@@ -1,0 +1,58 @@
+{
+  "v": 12,
+  "name": "API - Cartão Ponto",
+  "folders": [],
+  "requests": [
+    {
+      "v": "17",
+      "endpoint": "http://localhost:5000/pontos",
+      "name": "Listar Pontos (Histórico)",
+      "params": [],
+      "headers": [],
+      "method": "GET",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "preRequestScript": "",
+      "testScript": "pw.test(\"Status Code é 200 (Sucesso)\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});\n\npw.test(\"Resposta não está vazia\", ()=> {\n    pw.expect(pw.response.body).toBeType(\"array\");\n});",
+      "body": {
+        "contentType": null,
+        "body": null
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": "Busca todo o histórico de pontos batidos."
+    },
+    {
+      "v": "17",
+      "endpoint": "http://localhost:5000/pontos",
+      "name": "Registrar Ponto",
+      "params": [],
+      "headers": [],
+      "method": "POST",
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "preRequestScript": "",
+      "testScript": "pw.test(\"Ponto registrado com sucesso (Status 2xx)\", ()=> {\n    pw.expect(pw.response.status).toBeLevel2xx();\n});",
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n    \"tipo\": \"Entrada\"\n}"
+      },
+      "requestVariables": [],
+      "responses": {},
+      "description": "Registra um novo ponto no banco de dados."
+    }
+  ],
+  "headers": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "variables": [],
+  "description": "Coleção de testes automatizados para a API do projeto Cartão Ponto.",
+  "preRequestScript": "",
+  "testScript": ""
+}
